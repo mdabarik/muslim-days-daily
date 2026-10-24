@@ -627,5 +627,23 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-037",
+    "board_order": 37,
+    "title": "Add an optional shake-triggered notification action",
+    "category": "feature",
+    "priority": "low",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "needs_investigation": true,
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Investigate and build an optional gesture feature where shaking the phone triggers a user-selected Muslim Days notification or reminder action. Define allowed actions, such as opening today's reminder, showing a configured Dua or Dhikr prompt, or surfacing the next prayer summary, and require the user to enable and configure the feature explicitly. Research accelerometer thresholds, sensitivity levels, debounce and cooldown, pocket and travel false positives, accessibility, haptic or sound feedback, screen-on versus locked behavior, Android and iOS foreground or background restrictions, battery impact, privacy, and permission requirements. Provide an easy test flow and off switch. Acceptance criteria: deliberate shakes trigger only the selected action, normal movement does not create repeated notifications, cooldown prevents duplicates, the feature consumes minimal power, and unsupported background states fail quietly without disrupting the user.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
