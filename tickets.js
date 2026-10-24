@@ -66,7 +66,7 @@ function nextBoardOrder() {
 function ticketCard(ticket, order) {
   const resolved = ticket.status === "resolved";
   return `<article class="ticket-card">
-    <div class="ticket-card-top"><span class="ticket-key">#${order} · ${escapeHTML(ticket.id)}</span><span class="ticket-badges">${ticket.needs_investigation ? `<span class="investigation">Need investigation</span>` : ""}<span class="priority ${escapeHTML(ticket.priority)}">${escapeHTML(ticket.priority)}</span></span></div>
+    <div class="ticket-card-top"><span class="ticket-key">#${order} · ${escapeHTML(ticket.id)}</span><span class="ticket-badges">${ticket.needs_investigation ? `<span class="investigation">${ticket.investigation_level === "deep" ? "Deep investigation" : "Need investigation"}</span>` : ""}<span class="priority ${escapeHTML(ticket.priority)}">${escapeHTML(ticket.priority)}</span></span></div>
     <h3>${escapeHTML(ticket.title)}</h3>
     <p>${escapeHTML(ticket.description || "কোনো description দেওয়া হয়নি।")}</p>
     <div class="ticket-tags"><span>${escapeHTML(ticket.category)}</span><span>${escapeHTML(repoNames[ticket.repository] || ticket.repository)}</span><span>${resolved ? "resolved" : escapeHTML(ticket.stage || "todo")}</span>${ticket.owner ? `<span>${escapeHTML(ticket.owner)}</span>` : ""}</div>
@@ -159,6 +159,7 @@ $("#ticketForm").addEventListener("submit", (event) => {
     owner: $("#ticketOwner").value.trim(), description: $("#ticketDescription").value.trim(),
     url: $("#ticketUrl").value.trim(), resolved: existing?.resolved || "",
     needs_investigation: existing?.needs_investigation || false,
+    investigation_level: existing?.investigation_level || "",
     updated_at: new Date().toISOString(), source: "browser",
   };
   localTickets = localTickets.filter((item) => item.id !== id);
