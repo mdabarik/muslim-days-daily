@@ -573,5 +573,23 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-034",
+    "board_order": 34,
+    "title": "Build a private daily Amal Tracker",
+    "category": "feature",
+    "priority": "low",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "needs_investigation": true,
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Design and build a private, encouraging Amal Tracker organized by date. Provide separate trackable items for the five Fard prayers; Nafl prayers including Ishraq and Chasht or Duha; Tahajjud; Qur'an recitation with an option to record reading with Bangla meaning; protection Duas; morning Adhkar and Duas; evening Adhkar and Duas; self-improvement; Nafl fasting; Sadaqah; physical exercise; and reading Islamic books. Let users enable only the habits they want, add personal goals or notes, mark partial or complete progress, set flexible daily or weekly targets and reminders, and review calendar, streak, summary, and trend views. Keep worship history private on-device by default with secure backup or export only through explicit consent; support offline use, correction, reset, missed-day handling, and accessible Bangla and English UI. Avoid competitive, guilt-inducing, or public ranking patterns. Investigate and verify the names, timing, counts, virtues, Arabic text, translations, and sources of every included Salah, Dua, Adhkar, and fasting practice with qualified scholarly review before publishing. Acceptance criteria: every category can be independently enabled, scheduled, completed, edited, and reviewed by date; Fard and Nafl items are clearly separated; Qur'an reading can record Arabic-only or Bangla-meaning progress; reminders respect quiet hours; and all summaries accurately reflect the user's selected goals and entries.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
