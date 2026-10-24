@@ -236,5 +236,22 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-015",
+    "board_order": 15,
+    "title": "Add To-do as the fourth tool with a modern screen",
+    "category": "feature",
+    "priority": "medium",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Add To-do as item 4 inside Tools and create a modern, polished dedicated screen. Before implementation, investigate the existing Tools architecture, navigation and UX patterns, task data model, local persistence, and any sync or notification requirements.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
