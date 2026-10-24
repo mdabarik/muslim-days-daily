@@ -140,6 +140,12 @@ async function loadTickets() {
   }
 }
 
+function showBoard(view) {
+  $$("[data-view]").forEach((tab) => tab.setAttribute("aria-selected", String(tab.dataset.view === view)));
+  $$("[data-list]").forEach((list) => { list.hidden = list.dataset.list !== view; });
+}
+
+$$("[data-view]").forEach((tab) => tab.addEventListener("click", () => showBoard(tab.dataset.view)));
 $("#newTicket").addEventListener("click", () => openTicket());
 $("#exportTickets").addEventListener("click", exportTickets);
 [$("#ticketSearch"), $("#categoryFilter"), $("#repoFilter"), $("#priorityFilter")].forEach((control) => control.addEventListener("input", render));
