@@ -591,5 +591,23 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-035",
+    "board_order": 35,
+    "title": "Show nearby mosques on an interactive map",
+    "category": "feature",
+    "priority": "low",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "needs_investigation": true,
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Add a Nearby Mosques feature that opens an interactive map centered on the user's current location and shows nearby mosque markers. Support list and map views, distance and estimated travel time, mosque name and address, open-in-maps directions, search radius, manual location search, recenter, loading, empty, permission-denied, offline, and location-unavailable states. Investigate a reliable map and places data source, API terms, open-source options such as OpenStreetMap-based services, attribution, rate limits, result accuracy, duplicate or closed places, operating cost, caching, and Android and iOS permission requirements before implementation. Request precise location only when needed, explain its use, avoid retaining location history, and provide an approximate-location fallback. Acceptance criteria: users can find and select a nearby mosque, open directions in their preferred maps app, change the search area, and use the feature safely when location permission or network access is unavailable.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
