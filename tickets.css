@@ -25,6 +25,8 @@
 .ticket-card { padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); box-shadow: 0 8px 26px rgba(25,59,48,.06); }
 .ticket-card-top, .ticket-card-foot { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
 .ticket-key { color: var(--green2); font-size: 10px; font-weight: 850; letter-spacing: .1em; }
+.ticket-badges { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+.investigation { padding: 5px 8px; border: 1px solid #d7c6ec; border-radius: 99px; background: #f4edfc; color: #6d478f; font-size: 9px; font-weight: 850; text-transform: uppercase; }
 .priority { padding: 5px 8px; border-radius: 99px; font-size: 9px; font-weight: 850; text-transform: uppercase; }
 .priority.high { color: #a33e2d; background: #ffe8e1; }
 .priority.medium { color: #9a641e; background: #fff0d7; }
