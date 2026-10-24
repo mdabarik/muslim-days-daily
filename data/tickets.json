@@ -411,5 +411,41 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-025",
+    "board_order": 25,
+    "title": "Add Eid prayer rules and Duas",
+    "category": "content",
+    "priority": "low",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "needs_investigation": true,
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Research and create a clear Eid prayer guide covering preparation, timing, number of Rak'ahs, extra Takbirs, congregation flow, Khutbah, missed-prayer cases, recommended acts, and relevant Duas or Takbir. Identify recognized Madhhab differences instead of presenting one method as universal; verify Arabic text, transliteration, Bangla and English meaning, Hadith references, and authenticity with qualified scholarly review before publishing. Present Eid al-Fitr and Eid al-Adha differences where applicable, with accessible step-by-step content and source citations.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
+  },
+  {
+    "id": "MD-026",
+    "board_order": 26,
+    "title": "Add Janazah prayer rules and Duas",
+    "category": "content",
+    "priority": "low",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "needs_investigation": true,
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Research and create a respectful step-by-step Janazah prayer guide covering prerequisites, intention, standing position, four Takbirs, recitations, Salam, congregation arrangement, and relevant Duas for adults and children. Document recognized Madhhab differences, exceptional cases, and guidance for those who miss part of the prayer; verify every Arabic text, transliteration, Bangla and English meaning, Hadith reference, and authenticity with qualified scholarly review before publishing. Use sensitive, accessible language and include clear source citations.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
