@@ -663,5 +663,23 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-039",
+    "board_order": 39,
+    "title": "Add six notification filter tabs",
+    "category": "feature",
+    "priority": "low",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "needs_investigation": true,
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Add a filter-tab row inside the Notification screen with six total tabs: All, four Firebase notification categories, and one Hard-coded notification category. Define and document the final names and payload-to-category mapping for the four Firebase tabs before implementation. The All tab must combine both Firebase and hard-coded items in correct newest-first order, while every other tab shows only its matching source or category. Preserve the selected tab during the current session, show unread counts where reliable, and provide consistent loading, empty, error, pagination, refresh, and offline states. Ensure incoming Firebase messages and locally generated hard-coded notifications appear in the correct tab without duplication, and keep read, unread, delete, and deep-link behavior synchronized across All and filtered views. Acceptance criteria: exactly six tabs are visible or horizontally scrollable; each notification appears once in All and once in its correct filtered tab; switching tabs is fast and retains scroll state; badges update correctly; and Bangla and English labels remain readable on small screens and with accessibility text sizes.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
