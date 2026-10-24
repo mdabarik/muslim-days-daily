@@ -681,5 +681,23 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-040",
+    "board_order": 40,
+    "title": "Remove the developer profile photo from the home screen",
+    "category": "update",
+    "priority": "low",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "needs_investigation": true,
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Remove the developer profile photo from the home screen and adjust the surrounding layout so no empty circle, placeholder, broken image, gap, alignment issue, or unused tap target remains. First identify whether the photo is loaded from a bundled asset, remote URL, user profile model, configuration, or reusable header component; then remove the home-screen rendering and any home-only data fetch, image loader, semantic label, click action, and obsolete reference. Delete the underlying asset only if it is unused everywhere else. Preserve any developer name or link only when product requirements still call for it, and verify light and dark themes, Bangla and English layouts, small and large screens, loading states, cached builds, and accessibility focus order. Acceptance criteria: the photo is absent after a clean install and app update, no blank space or broken fallback appears, no unnecessary request is made for it, and other screens that intentionally use the same shared component or asset remain correct.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
