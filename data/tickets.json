@@ -1,6 +1,7 @@
 [
   {
     "id": "MD-001",
+    "board_order": 7,
     "title": "Make lock screen player stylish",
     "category": "feature",
     "priority": "medium",
@@ -17,6 +18,7 @@
   },
   {
     "id": "MD-002",
+    "board_order": 1,
     "title": "Advanced custom event and screen-time tracking",
     "category": "feature",
     "priority": "high",
@@ -33,6 +35,7 @@
   },
   {
     "id": "MD-003",
+    "board_order": 2,
     "title": "Add app reverse-engineering protection",
     "category": "update",
     "priority": "high",
@@ -49,6 +52,7 @@
   },
   {
     "id": "MD-004",
+    "board_order": 3,
     "title": "Fix new Firebase crash",
     "category": "bug",
     "priority": "high",
@@ -65,6 +69,7 @@
   },
   {
     "id": "MD-005",
+    "board_order": 4,
     "title": "Fix Firebase Messaging notification bugs",
     "category": "bug",
     "priority": "high",
@@ -81,6 +86,7 @@
   },
   {
     "id": "MD-006",
+    "board_order": 8,
     "title": "Build notification screen for hard-coded notifications",
     "category": "feature",
     "priority": "medium",
@@ -97,6 +103,7 @@
   },
   {
     "id": "MD-007",
+    "board_order": 9,
     "title": "Add dedicated notification settings screen",
     "category": "feature",
     "priority": "medium",
@@ -113,6 +120,7 @@
   },
   {
     "id": "MD-008",
+    "board_order": 5,
     "title": "Improve Muslim Days AI",
     "category": "feature",
     "priority": "high",
@@ -129,6 +137,7 @@
   },
   {
     "id": "MD-009",
+    "board_order": 10,
     "title": "পাঁচ ওয়াক্ত নামাজের নিয়ত",
     "category": "content",
     "priority": "medium",
@@ -145,6 +154,7 @@
   },
   {
     "id": "MD-010",
+    "board_order": 11,
     "title": "নামাজ ভঙ্গের কারণ ও নামাজের ফরজসমূহ",
     "category": "content",
     "priority": "medium",
@@ -161,6 +171,7 @@
   },
   {
     "id": "MD-011",
+    "board_order": 13,
     "title": "অজু ভঙ্গের কারণ ও অজুর ফরজসমূহ",
     "category": "content",
     "priority": "medium",
@@ -177,6 +188,7 @@
   },
   {
     "id": "MD-012",
+    "board_order": 6,
     "title": "নফল নামাজ: সালাতুত তাসবিহ বিষয়ে investigation",
     "category": "content",
     "priority": "high",
@@ -193,6 +205,7 @@
   },
   {
     "id": "MD-013",
+    "board_order": 14,
     "title": "Fix relevant text on the alarm screen",
     "category": "bug",
     "priority": "medium",
@@ -203,6 +216,23 @@
     "due": "",
     "owner": "",
     "description": "Review and correct all relevant alarm-screen text, labels, instructions, localization, and empty or error-state copy so the screen is clear and consistent.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
+  },
+  {
+    "id": "MD-014",
+    "board_order": 12,
+    "title": "Improve calendar screen and show all month names",
+    "category": "feature",
+    "priority": "medium",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Make the calendar screen more visually polished and add an accessible place to view the names of all 12 Hijri months, all 12 Bangla months, and all 12 English months.",
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"

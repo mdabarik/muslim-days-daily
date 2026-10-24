@@ -32,7 +32,7 @@ function allTickets() {
   [...repositoryTickets, ...localTickets].forEach((ticket) => tickets.set(ticket.id, ticket));
   return [...tickets.values()].sort((a, b) => {
     const rank = { high: 0, medium: 1, low: 2 };
-    return (rank[a.priority] ?? 3) - (rank[b.priority] ?? 3) || String(b.created).localeCompare(String(a.created)) || String(a.id).localeCompare(String(b.id));
+    return (rank[a.priority] ?? 3) - (rank[b.priority] ?? 3) || (a.board_order ?? Number.MAX_SAFE_INTEGER) - (b.board_order ?? Number.MAX_SAFE_INTEGER) || String(b.created).localeCompare(String(a.created)) || String(a.id).localeCompare(String(b.id));
   });
 }
 
@@ -57,6 +57,10 @@ function saveLocal() {
 function nextId() {
   const largest = allTickets().reduce((max, ticket) => Math.max(max, Number(String(ticket.id).replace(/\D/g, "")) || 0), 0);
   return `MD-${String(largest + 1).padStart(3, "0")}`;
+}
+
+function nextBoardOrder() {
+  return allTickets().reduce((max, ticket) => Math.max(max, Number(ticket.board_order) || 0), 0) + 1;
 }
 
 function ticketCard(ticket, order) {
@@ -148,7 +152,7 @@ $("#ticketForm").addEventListener("submit", (event) => {
   const id = $("#ticketId").value || nextId();
   const existing = allTickets().find((ticket) => ticket.id === id);
   const ticket = {
-    id, title: $("#ticketTitle").value.trim(), category: $("#ticketCategory").value,
+    id, board_order: existing?.board_order || nextBoardOrder(), title: $("#ticketTitle").value.trim(), category: $("#ticketCategory").value,
     priority: $("#ticketPriority").value, repository: $("#ticketRepo").value,
     stage: $("#ticketStage").value, status: existing?.status || "active",
     created: $("#ticketCreated").value, due: $("#ticketDue").value,
