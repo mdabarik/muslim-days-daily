@@ -270,5 +270,22 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-017",
+    "board_order": 17,
+    "title": "Add flexible location-based Sehri, Iftar, Azan and prayer times",
+    "category": "feature",
+    "priority": "medium",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Add a clear home-page settings flow where users can adjust Sehri, Iftar, and all five daily prayer times for their own area. Keep Azan time and congregation or personal prayer time as two separate values for every prayer, so a user can choose when the Azan should play and when they plan to pray. Validate time format, ordering, duplicates, date and timezone changes, and invalid gaps; show the selected area and whether each value is calculated or manually overridden. Apply the saved times consistently to the home page, countdowns, alarms, reminders, notifications, widgets, and lock-screen surfaces. Support per-prayer enable or disable controls, a safe reset to the calculated location-based schedule, and a clear fallback when location or prayer-time data is unavailable. Preserve manual choices across app restarts and document how daylight-saving, travel, and location changes affect overrides. Acceptance criteria: each time can be edited independently; Azan and prayer times never overwrite one another; invalid entries cannot be saved and explain the error; all affected UI and notifications use the chosen values; and reset restores the current area's verified default schedule.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
