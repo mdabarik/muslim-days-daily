@@ -645,5 +645,23 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-038",
+    "board_order": 38,
+    "title": "Add Fixed or Not fixed behavior for the home hero section",
+    "category": "feature",
+    "priority": "low",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "needs_investigation": true,
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Add a setting that lets the user choose whether the home-screen hero section is Fixed or Not fixed. In Not fixed mode, the hero must move naturally upward and leave the viewport when the user swipes or scrolls up, allowing the content below to use the full screen. In Fixed mode, preserve the intended pinned or sticky hero behavior without covering prayer cards, controls, or other content. Save the preference across app restarts and apply a clear default for existing users. Investigate the current nested-scroll and collapsing-header architecture, safe-area and status-bar handling, gesture conflicts, accessibility focus order, reduced-motion behavior, orientation changes, small-screen layouts, and performance before implementation. Acceptance criteria: switching the setting updates the home screen reliably; Not fixed scrolling is smooth and fully dismisses the hero; Fixed mode remains stable without overlap or jump; pull-to-refresh and horizontal gestures still work; and the selected mode persists after restart and app update.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
