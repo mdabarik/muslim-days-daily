@@ -609,5 +609,23 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-036",
+    "board_order": 36,
+    "title": "Design native home-screen widgets from the app",
+    "category": "feature",
+    "priority": "low",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "needs_investigation": true,
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Design and build native Android and iOS home-screen widgets that use the Muslim Days app's visual language, colors, typography, icons, and data. Define useful small, medium, and large layouts for the next prayer and countdown, today's prayer times, Hijri and Gregorian date, Sehri and Iftar during Ramadan, location, and a tap action that opens the relevant app screen. Let users select the widget content and theme while keeping information readable in light, dark, dynamic-color, and accessibility modes. Investigate platform widget frameworks, minimum sizes, update-frequency and background-execution limits, battery use, timezone and location changes, custom prayer-time offsets, stale-data handling, offline fallback, app-to-widget data sharing, and behavior after reboot or app updates. Acceptance criteria: each supported widget renders consistently with the app, displays the same verified times as the app, refreshes at safe prayer and date boundaries, exposes a last-updated or stale state when needed, and opens the correct destination when tapped.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
