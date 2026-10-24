@@ -127,7 +127,7 @@ function exportTickets() {
 
 async function loadTickets() {
   try {
-    const response = await fetch("data/tickets.json", { cache: "no-store" });
+    const response = await fetch(`data/tickets.json?v=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error("Ticket data পাওয়া যায়নি");
     repositoryTickets = await response.json();
     render();
