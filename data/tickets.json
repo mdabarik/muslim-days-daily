@@ -190,5 +190,21 @@
     "url": "https://github.com/mdabarik/muslim-days-daily",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-013",
+    "title": "Fix relevant text on the alarm screen",
+    "category": "bug",
+    "priority": "medium",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Review and correct all relevant alarm-screen text, labels, instructions, localization, and empty or error-state copy so the screen is clear and consistent.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]

@@ -32,7 +32,7 @@ function allTickets() {
   [...repositoryTickets, ...localTickets].forEach((ticket) => tickets.set(ticket.id, ticket));
   return [...tickets.values()].sort((a, b) => {
     const rank = { high: 0, medium: 1, low: 2 };
-    return (rank[a.priority] ?? 3) - (rank[b.priority] ?? 3) || String(b.created).localeCompare(String(a.created));
+    return (rank[a.priority] ?? 3) - (rank[b.priority] ?? 3) || String(b.created).localeCompare(String(a.created)) || String(a.id).localeCompare(String(b.id));
   });
 }
 
@@ -59,10 +59,10 @@ function nextId() {
   return `MD-${String(largest + 1).padStart(3, "0")}`;
 }
 
-function ticketCard(ticket) {
+function ticketCard(ticket, order) {
   const resolved = ticket.status === "resolved";
   return `<article class="ticket-card">
-    <div class="ticket-card-top"><span class="ticket-key">${escapeHTML(ticket.id)}</span><span class="priority ${escapeHTML(ticket.priority)}">${escapeHTML(ticket.priority)}</span></div>
+    <div class="ticket-card-top"><span class="ticket-key">#${order} · ${escapeHTML(ticket.id)}</span><span class="priority ${escapeHTML(ticket.priority)}">${escapeHTML(ticket.priority)}</span></div>
     <h3>${escapeHTML(ticket.title)}</h3>
     <p>${escapeHTML(ticket.description || "কোনো description দেওয়া হয়নি।")}</p>
     <div class="ticket-tags"><span>${escapeHTML(ticket.category)}</span><span>${escapeHTML(repoNames[ticket.repository] || ticket.repository)}</span><span>${resolved ? "resolved" : escapeHTML(ticket.stage || "todo")}</span>${ticket.owner ? `<span>${escapeHTML(ticket.owner)}</span>` : ""}</div>
@@ -84,8 +84,8 @@ function render() {
   $("#resolvedCount").textContent = all.filter((ticket) => ticket.status === "resolved").length;
   $("#activeBadge").textContent = active.length;
   $("#resolvedBadge").textContent = resolved.length;
-  $("#activeTickets").innerHTML = active.length ? active.map(ticketCard).join("") : `<div class="empty">কোনো active ticket নেই।</div>`;
-  $("#resolvedTickets").innerHTML = resolved.length ? resolved.map(ticketCard).join("") : `<div class="empty">কোনো resolved ticket নেই।</div>`;
+  $("#activeTickets").innerHTML = active.length ? active.map((ticket, index) => ticketCard(ticket, index + 1)).join("") : `<div class="empty">কোনো active ticket নেই।</div>`;
+  $("#resolvedTickets").innerHTML = resolved.length ? resolved.map((ticket, index) => ticketCard(ticket, active.length + index + 1)).join("") : `<div class="empty">কোনো resolved ticket নেই।</div>`;
   $$("[data-edit]").forEach((button) => button.addEventListener("click", () => openTicket(allTickets().find((ticket) => ticket.id === button.dataset.edit))));
   $$("[data-toggle]").forEach((button) => button.addEventListener("click", () => toggleTicket(button.dataset.toggle)));
 }
