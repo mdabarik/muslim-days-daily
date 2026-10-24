@@ -304,5 +304,22 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-019",
+    "board_order": 19,
+    "title": "Build a reliable Zakat calculator",
+    "category": "feature",
+    "priority": "medium",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Design and build a clear Zakat calculator for eligible cash, bank balances, gold, silver, investments, business assets, receivables, and deductible short-term liabilities. Support gold- or silver-based Nisab, current metal prices with source and last-updated time, local currency conversion, manual price override, Hijri-year eligibility, and the standard 2.5% calculation with an itemized result. Investigate and document recognized scholarly differences before implementation, explain what is included or excluded, cite reviewed Islamic sources, and avoid presenting disputed rules as universal. Keep financial inputs private on the device and provide reset, save or resume, share or export, accessibility, input validation, and offline fallback behavior. Acceptance criteria: the user can select a Nisab method, enter assets and eligible liabilities, see whether the threshold is met, understand every calculation step, identify the price and source used, and receive a clearly labeled estimate with a recommendation to consult a qualified scholar for personal cases.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
