@@ -253,5 +253,22 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-016",
+    "board_order": 16,
+    "title": "Create full app features and services documentation page",
+    "category": "feature",
+    "priority": "medium",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Create a well-organized HTML documentation page covering every Muslim Days app feature, screen, user flow, architecture, and dependency. Document all services in use, including Firebase, Cloudflare, and Google Analytics, and add a verified inventory of every open-source API with its name, purpose, endpoint or source link, license, data usage, owner, and where it is used in the app.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
