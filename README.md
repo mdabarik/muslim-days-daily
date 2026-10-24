@@ -18,11 +18,14 @@ Muslim Days app-এর central operations repository। এখানে architec
 - Five 1200×630 images in `quizzes/images/`
 - Searchable quiz cards and local delivery history UI
 - Date, type and keyword filters; JSON export
+- Active/resolved ticket management for features, updates, bugs, content and promotion
 - GitHub Pages-ready static site with no build dependency
 
 ## Add content
 
 Quiz JSON/image যোগ করে `data/quiz-list.json`-এ card metadata দিন। Shared sent history `data/delivery-history.json`-এ রাখুন। Website থেকে যোগ করা record browser-এ থাকে; **Export JSON** দিয়ে download করে shared file replace করা যায়।
+
+Ticket management page: `tickets.html`। Shared tickets `data/tickets.json`-এ থাকে। Page থেকে নতুন ticket যোগ, edit, resolve/reopen ও filter করা যায়; **Export JSON** দিয়ে team-এর shared file update করা যায়।
 
 ## Run
 

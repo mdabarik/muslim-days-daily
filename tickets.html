@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#153a31"><meta name="description" content="Muslim Days ticket management">
+  <title>Tickets · Muslim Days</title>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="tickets.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="mark">م</span><span><b>Muslim Days</b><small>Ticket management</small></span></a>
+    <div class="ticket-nav"><a href="index.html">← Operations home</a><button class="button primary" id="newTicket">+ New ticket</button></div>
+  </header>
+
+  <main id="top" class="tickets-main">
+    <section class="ticket-hero">
+      <div><p class="eyebrow">Product delivery desk</p><h1>Feature, update ও issue—<br><em>কাজের পরিষ্কার হিসাব।</em></h1><p class="lead">তিনটি repository-এর active কাজ track করুন, resolved সিদ্ধান্ত সংরক্ষণ করুন এবং priority অনুযায়ী পরের কাজ ঠিক করুন।</p></div>
+      <div class="ticket-stats"><div><b id="activeCount">0</b><span>Active</span></div><div><b id="progressCount">0</b><span>In progress</span></div><div><b id="highCount">0</b><span>High priority</span></div><div><b id="resolvedCount">0</b><span>Resolved</span></div></div>
+    </section>
+
+    <section class="ticket-toolbar">
+      <label class="ticket-search">⌕ <input id="ticketSearch" type="search" placeholder="Ticket title, ID বা description…"></label>
+      <label>Category<select id="categoryFilter"><option value="all">সব category</option><option value="feature">Feature</option><option value="update">Update</option><option value="bug">Bug</option><option value="content">Content</option><option value="promotion">Promotion</option></select></label>
+      <label>Repository<select id="repoFilter"><option value="all">সব repository</option><option value="muslim-days-daily">Daily operations</option><option value="push-notifications">Push notifications</option><option value="muslim-days">Main codebase</option></select></label>
+      <label>Priority<select id="priorityFilter"><option value="all">সব priority</option><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option></select></label>
+      <button id="resetTicketFilters">Reset</button>
+      <button class="button secondary" id="exportTickets">Export JSON</button>
+    </section>
+
+    <section class="ticket-board">
+      <div class="ticket-column active-column">
+        <div class="column-head"><div><span class="status-dot"></span><h2>Active tickets</h2></div><b id="activeBadge">0</b></div>
+        <div class="ticket-list" id="activeTickets"></div>
+      </div>
+      <div class="ticket-column resolved-column">
+        <div class="column-head"><div><span class="status-dot"></span><h2>Resolved tickets</h2></div><b id="resolvedBadge">0</b></div>
+        <div class="ticket-list" id="resolvedTickets"></div>
+      </div>
+    </section>
+
+    <aside class="storage-note"><b>Shared workflow</b><span>Website থেকে যোগ করা ticket এই browser-এ save হয়। Team-এর shared list update করতে <strong>Export JSON</strong> করে <code>data/tickets.json</code> replace করুন।</span></aside>
+  </main>
+
+  <dialog id="ticketDialog">
+    <form method="dialog" id="ticketForm">
+      <div class="dialog-head"><div><p class="eyebrow">Work item</p><h2 id="ticketDialogTitle">New ticket</h2></div><button value="cancel" aria-label="Close">×</button></div>
+      <div class="form-grid">
+        <label class="full">Title<input id="ticketTitle" required placeholder="Feature, update বা issue-এর নাম"></label>
+        <label>Category<select id="ticketCategory"><option value="feature">Feature</option><option value="update">Update</option><option value="bug">Bug</option><option value="content">Content</option><option value="promotion">Promotion</option></select></label>
+        <label>Priority<select id="ticketPriority"><option value="medium">Medium</option><option value="high">High</option><option value="low">Low</option></select></label>
+        <label>Repository<select id="ticketRepo"><option value="muslim-days-daily">Daily operations</option><option value="push-notifications">Push notifications</option><option value="muslim-days">Main codebase</option></select></label>
+        <label>Stage<select id="ticketStage"><option value="todo">To do</option><option value="in-progress">In progress</option><option value="blocked">Blocked</option></select></label>
+        <label>Created<input id="ticketCreated" type="date" required></label>
+        <label>Due date<input id="ticketDue" type="date"></label>
+        <label class="full">Owner<input id="ticketOwner" placeholder="Name বা team (optional)"></label>
+        <label class="full">Description<textarea id="ticketDescription" rows="4" placeholder="কাজটি কী, কেন দরকার এবং done হওয়ার শর্ত"></textarea></label>
+        <label class="full">Reference URL<input id="ticketUrl" type="url" placeholder="GitHub issue, design বা related link"></label>
+      </div>
+      <input id="ticketId" type="hidden">
+      <div class="dialog-actions"><button class="button secondary" value="cancel">Cancel</button><button class="button primary" value="default">Save ticket</button></div>
+    </form>
+  </dialog>
+
+  <footer><span>Muslim Days Ticket Management</span><a href="index.html">Operations dashboard</a></footer>
+  <script src="tickets.js"></script>
+</body>
+</html>
