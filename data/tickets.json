@@ -110,5 +110,21 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-008",
+    "title": "Improve Muslim Days AI",
+    "category": "feature",
+    "priority": "high",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Improve the Muslim Days AI experience with more accurate responses, better Islamic context, clearer UX, stronger reliability, and measurable quality checks.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
