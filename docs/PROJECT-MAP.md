@@ -8,6 +8,7 @@ Muslim Days app-এর সব কাজ তিনটি repository ঘিরে 
    - Quiz/content plans ও delivery history
    - Graphics, campaign assets এবং brand materials
    - Facebook promotion plan, copy ও campaign tracking
+   - Official Facebook page: https://www.facebook.com/profile.php?id=61595709925575
    - Product roadmap, release notes এবং operational documentation
 2. **`mdabarik/push-notifications` — messaging repository**
    - Push admin page, content/message templates, sending guide
@@ -17,3 +18,8 @@ Muslim Days app-এর সব কাজ তিনটি repository ঘিরে 
    - Repository: https://github.com/mdabarik/muslim-days
 
 নতুন operational artifact প্রথমে central repository-র উপযুক্ত folder-এ যাবে। Runtime code main codebase-এ এবং push infrastructure `push-notifications`-এ থাকবে। প্রয়োজন হলে central repo থেকে তাদের documentation বা live URL link করা হবে।
+
+## Promotion channel
+
+- **Muslim Days Facebook page:** https://www.facebook.com/profile.php?id=61595709925575
+- Facebook campaign creative, copy, publishing plan ও performance notes central `muslim-days-daily` repository-তে রাখা হবে।

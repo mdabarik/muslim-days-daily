@@ -8,6 +8,10 @@ Muslim Days app-এর central operations repository। এখানে architec
 2. [`mdabarik/push-notifications`](https://github.com/mdabarik/push-notifications) — push admin, Cloudflare Worker ও Firebase messaging
 3. [`mdabarik/muslim-days`](https://github.com/mdabarik/muslim-days) — production app source, features, builds ও releases
 
+## Promotion channel
+
+- [Muslim Days Facebook page](https://www.facebook.com/profile.php?id=61595709925575) — official Facebook promotion ও audience communication
+
 ## Current contents
 
 - Quiz 3–7 JSON files in `quizzes/`
