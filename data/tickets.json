@@ -287,5 +287,22 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-018",
+    "board_order": 18,
+    "title": "Add small horizontal dividers to prayer-time sections",
+    "category": "feature",
+    "priority": "medium",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "On the prayer-times screen, add a small horizontal divider in each of these three sections: prohibited prayer times, morning Nafl Salah, and night Nafl Ibadah. Use the same divider width, thickness, color, alignment, and vertical spacing in all three places; match the existing visual system and keep it clear in light and dark themes. Acceptance criteria: all three dividers render in the correct section, remain aligned on supported screen sizes, do not overlap or shift nearby text, and use accessible contrast without becoming visually dominant.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
