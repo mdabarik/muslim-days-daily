@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#153a31"><meta name="description" content="Muslim Days operations dashboard">
+  <title>Muslim Days Daily</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#top"><span class="mark">م</span><span><b>Muslim Days</b><small>App operations</small></span></a><span id="today" class="muted"></span></header>
+  <main id="top">
+    <section class="hero">
+      <div><p class="eyebrow">Content control room</p><h1>প্রতিদিনের content,<br><em>এক জায়গায় গোছানো।</em></h1><p class="lead">Quiz, image, JSON link এবং কবে কোন notification পাঠানো হয়েছে—সবকিছুর পরিষ্কার হিসাব।</p></div>
+      <div class="stats"><div><b id="quizCount">—</b><span>Quiz</span></div><div><b id="readyCount">—</b><span>Ready</span></div><div><b id="sentCount">—</b><span>Sent</span></div><div><b id="monthCount">—</b><span>This month</span></div></div>
+    </section>
+    <nav class="tabs"><button class="tab active" data-view="library">Quiz library</button><button class="tab" data-view="history">Delivery history</button><button class="tab" data-view="setup">Project map</button></nav>
+
+    <section class="view active" id="libraryView">
+      <div class="section-head"><div><p class="eyebrow">Ready to send</p><h2>Quiz library</h2><p class="muted">বাংলা ও English, ৫টি প্রশ্ন, ৪টি option এবং explanation-সহ।</p></div><label class="search">⌕ <input id="quizSearch" type="search" placeholder="Quiz খুঁজুন…"></label></div>
+      <div class="quiz-grid" id="quizGrid"><div class="empty">Quiz load হচ্ছে…</div></div>
+    </section>
+
+    <section class="view" id="historyView">
+      <div class="section-head"><div><p class="eyebrow">Sent archive</p><h2>Delivery history</h2><p class="muted">তারিখ, type বা keyword দিয়ে পাঠানো content খুঁজুন।</p></div><div class="actions"><button class="button secondary" id="exportHistory">Export JSON</button><button class="button primary" id="addDelivery">+ Delivery যোগ করুন</button></div></div>
+      <div class="filters"><label>From<input type="date" id="dateFrom"></label><label>To<input type="date" id="dateTo"></label><label>Type<select id="typeFilter"><option value="all">সব type</option><option value="quiz">Quiz</option><option value="notification">Notification</option><option value="reminder">Reminder</option><option value="feedback">Feedback</option></select></label><label class="wide">Search<input id="historySearch" type="search" placeholder="Title, note…"></label><button id="resetFilters">Reset</button></div>
+      <div class="history-list" id="historyList"></div>
+    </section>
+
+    <section class="view" id="setupView">
+      <div class="section-head"><div><p class="eyebrow">One app, three repositories</p><h2>Muslim Days project map</h2><p class="muted">App-এর সব কাজ এই তিনটি repository ঘিরে পরিচালিত হবে।</p></div></div>
+      <div class="repo-grid">
+        <article class="repo-card primary-repo"><span>01</span><div><h3>Muslim Days Daily</h3><p>Central operations hub। Architecture notes, dependency map, graphics, Facebook promotion, quiz/content plan, campaign assets ও delivery history এখানে ধাপে ধাপে যোগ হবে।</p><a href="https://github.com/mdabarik/muslim-days-daily" target="_blank" rel="noopener">mdabarik/muslim-days-daily ↗</a></div><b>Central</b></article>
+        <article class="repo-card"><span>02</span><div><h3>Push Notifications</h3><p>Admin page, message templates, Cloudflare Worker, Firebase push এবং sending guide।</p><a href="https://github.com/mdabarik/push-notifications" target="_blank" rel="noopener">mdabarik/push-notifications ↗</a></div><b>Messaging</b></article>
+        <article class="repo-card"><span>03</span><div><h3>Main codebase</h3><p>Muslim Days app-এর production source code, app architecture, features, builds ও release implementation।</p><a href="https://github.com/mdabarik/muslim-days" target="_blank" rel="noopener">mdabarik/muslim-days ↗</a></div><b>Application</b></article>
+      </div>
+      <div class="setup-grid">
+        <article><b>✓</b><div><h3>Quiz content ready</h3><p>Quiz 3–7 JSON ও 1200×630 images এই repo-তে আছে।</p></div></article>
+        <article><b>✓</b><div><h3>Messaging skill ready</h3><p><code>$muslim-days-messaging</code> payload validation ও delivery workflow জানে।</p></div></article>
+        <article><b>→</b><div><h3>Worker dependencies</h3><p>Firebase service account, admin password এবং Cloudflare KV production-এ থাকতে হবে।</p></div></article>
+        <article><b>0</b><div><h3>No package install</h3><p>এই dashboard plain HTML/CSS/JS; npm dependency নেই।</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="deliveryDialog"><form method="dialog" id="deliveryForm"><div class="dialog-head"><div><p class="eyebrow">Delivery record</p><h2>পাঠানোর তথ্য</h2></div><button value="cancel" aria-label="Close">×</button></div><div class="form-grid">
+    <label>তারিখ<input id="deliveryDate" type="date" required></label><label>Type<select id="deliveryType"><option value="quiz">Quiz</option><option value="notification">Notification</option><option value="reminder">Reminder</option><option value="feedback">Feedback</option></select></label>
+    <label class="full">Title<input id="deliveryTitle" required placeholder="যা পাঠানো হয়েছে"></label><label>Audience<select id="deliveryAudience"><option value="all">All users</option><option value="debug">Debug phones</option><option value="single">Single device</option></select></label><label>Status<select id="deliveryStatus"><option value="sent">Sent</option><option value="scheduled">Scheduled</option><option value="draft">Draft</option></select></label>
+    <label class="full">JSON URL<input id="deliveryJson" type="url" placeholder="https://…/quiz.json"></label><label class="full">Image URL<input id="deliveryImage" type="url" placeholder="https://…/image.png"></label><label class="full">Note<textarea id="deliveryNote" rows="3" placeholder="Notification text বা note"></textarea></label>
+  </div><input id="deliveryQuizId" type="hidden"><div class="dialog-actions"><button class="button secondary" value="cancel">Cancel</button><button class="button primary" value="default">Save delivery</button></div></form></dialog>
+  <footer><span>Muslim Days Daily</span><span>GitHub Pages ready</span></footer><script src="app.js"></script>
+</body></html>

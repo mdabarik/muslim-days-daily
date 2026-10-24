@@ -1,0 +1,7 @@
+[
+  {"id":"quiz-3","title":"রাসূলুল্লাহ (সা.)-এর জীবনী","title_en":"Life of the Prophet Muhammad (SAW)","category":"নবীর জীবনী","question_count":5,"status":"ready","json_url":"quizzes/quiz-3.json","image":"quizzes/images/quiz-3.png"},
+  {"id":"quiz-4","title":"হযরত ইউসুফ (আ.)-এর জীবনী","title_en":"Life of Prophet Yusuf (AS)","category":"নবীর জীবনী","question_count":5,"status":"ready","json_url":"quizzes/quiz-4.json","image":"quizzes/images/quiz-4.png"},
+  {"id":"quiz-5","title":"হযরত আবু বকর (রা.)-এর জীবনী","title_en":"Life of Abu Bakr (RA)","category":"সাহাবির জীবনী","question_count":5,"status":"ready","json_url":"quizzes/quiz-5.json","image":"quizzes/images/quiz-5.png"},
+  {"id":"quiz-6","title":"হযরত উমর (রা.)-এর জীবনী","title_en":"Life of Umar (RA)","category":"সাহাবির জীবনী","question_count":5,"status":"ready","json_url":"quizzes/quiz-6.json","image":"quizzes/images/quiz-6.png"},
+  {"id":"quiz-7","title":"আল-কুরআন কুইজ","title_en":"Al-Quran Quiz","category":"কুরআন","question_count":5,"status":"ready","json_url":"quizzes/quiz-7.json","image":"quizzes/images/quiz-7.png"}
+]
