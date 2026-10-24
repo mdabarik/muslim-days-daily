@@ -699,5 +699,23 @@
     "url": "https://github.com/mdabarik/muslim-days",
     "resolved": "",
     "source": "repository"
+  },
+  {
+    "id": "MD-041",
+    "board_order": 41,
+    "title": "Fix Hijri date rollover at Maghrib",
+    "category": "bug",
+    "priority": "low",
+    "repository": "muslim-days",
+    "stage": "todo",
+    "status": "active",
+    "needs_investigation": true,
+    "created": "2026-10-24",
+    "due": "",
+    "owner": "",
+    "description": "Fix Arabic or Hijri date handling so the Islamic date rolls over at the user's local sunset or Maghrib boundary instead of 12:00 AM. Keep Gregorian and Bangla calendar dates on their own verified local-midnight rollover rules. Investigate whether the app's Maghrib prayer time and calculated sunset are always equivalent for date-boundary purposes, and define a safe fallback when location, prayer-time, timezone, or network data is unavailable. Apply one shared date-boundary service across the home screen, calendar, prayer screen, widgets, lock screen, fasting schedules, Ayyam al-Bid, Ramadan, Islamic events, reminders, notifications, analytics labels, and cached data. Handle location and timezone changes, travel across the date line, daylight-saving changes, manual Hijri adjustment for local moon sighting, app background or terminated state, device clock changes, and the interval between Maghrib and midnight without off-by-one errors. Acceptance criteria: after local Maghrib the Hijri date advances immediately while Gregorian and Bangla dates remain unchanged until their midnight boundary; before Maghrib the previous Hijri date remains visible; all app surfaces show the same date; scheduled events use the correct Islamic day; and automated tests cover before, exactly at, and after Maghrib plus midnight, travel, offline, and month or year boundaries.",
+    "url": "https://github.com/mdabarik/muslim-days",
+    "resolved": "",
+    "source": "repository"
   }
 ]
