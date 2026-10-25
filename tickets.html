@@ -4,7 +4,7 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#153a31"><meta name="description" content="Muslim Days ticket management">
   <title>Tickets · Muslim Days</title>
-  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="tickets.css?v=8">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="tickets.css?v=9">
 </head>
 <body>
   <header class="topbar">
@@ -33,7 +33,14 @@
     </div>
 
     <section class="ticket-board">
-      <div class="ticket-list" id="activeTickets" data-list="active"></div>
+      <div class="active-panel" data-list="active">
+        <a class="progress-link" href="tickets-explanations.html">
+          <span class="progress-icon" aria-hidden="true">↗</span>
+          <span><small>Progress</small><strong>Ticket implementation guide</strong><em>৪১টি ticket-এর বিস্তারিত explanation, changes, placement, guardrail ও skill দেখুন</em></span>
+          <b>Open page →</b>
+        </a>
+        <div class="ticket-list" id="activeTickets"></div>
+      </div>
       <div class="ticket-list" id="resolvedTickets" data-list="resolved" hidden></div>
     </section>
 

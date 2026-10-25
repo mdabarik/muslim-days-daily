@@ -33,6 +33,15 @@
 .board-tab.resolved .status-dot { background: #4fbf8f; box-shadow: 0 0 0 4px rgba(79,191,143,.18); }
 
 .ticket-list[hidden] { display: none; }
+.active-panel[hidden] { display: none; }
+.progress-link { display: grid; grid-template-columns: auto minmax(0,1fr) auto; gap: 16px; align-items: center; margin-bottom: 16px; padding: 18px 20px; border: 1px solid rgba(214,167,77,.45); border-radius: 18px; background: linear-gradient(120deg,#fff9e9,#f5ead0); color: var(--ink); text-decoration: none; box-shadow: 0 8px 24px rgba(93,70,22,.08); transition: transform .18s, box-shadow .18s; }
+.progress-link:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(93,70,22,.13); }
+.progress-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; background: var(--ink); color: #fff; font-size: 21px; }
+.progress-link small,.progress-link strong,.progress-link em { display: block; }
+.progress-link small { color: #8a5717; font-size: 11px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.progress-link strong { margin-top: 3px; font-size: 18px; }
+.progress-link em { margin-top: 4px; color: var(--muted); font-size: 13px; font-style: normal; line-height: 1.45; }
+.progress-link > b { color: var(--green); font-size: 13px; white-space: nowrap; }
 .ticket-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; align-items: stretch; }
 .ticket-card { display: flex; flex-direction: column; padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: var(--paper); box-shadow: 0 6px 22px rgba(25,59,48,.06); transition: transform .18s, box-shadow .18s, border-color .18s; }
 .ticket-card:hover { transform: translateY(-2px); border-color: rgba(47,125,97,.3); box-shadow: 0 14px 34px rgba(25,59,48,.11); }
@@ -65,6 +74,8 @@
   .ticket-search { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
+  .progress-link { grid-template-columns: auto minmax(0,1fr); padding: 16px; }
+  .progress-link > b { grid-column: 2; }
   .ticket-nav a { display: none; }
   .ticket-hero { padding: 22px 18px; border-radius: 20px; }
   .ticket-stats { grid-template-columns: 1fr 1fr; }
